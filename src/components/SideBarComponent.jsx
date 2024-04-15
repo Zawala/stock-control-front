@@ -31,12 +31,11 @@ export default function SideBarComponent() {
   };
   const location = useLocation();
   const currentPage = location.pathname;
-  console.log(currentPage);
-  // const styles = theme => ({
-  //     listItemText:{
-  //         fontSize:'0.7em',//Insert your required size
-  //     }
-  //     });
+  
+  if (currentPage === "/login") {
+    return null; // Do not render the SideBarComponent on the login page
+ }
+ 
   const sideBarComponent = [
     {
       title: "Home",

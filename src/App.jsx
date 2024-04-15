@@ -1,7 +1,9 @@
-import Inter from "../public/static/fonts/Inter.ttf";
+import Inter from "/public/static/fonts/Inter.ttf";
 import { ThemeProvider, CssBaseline, createTheme, Box } from "@mui/material";
 import RootComponent from "./components/RootComponent";
+
 import RootPage from "./components/RootPage";
+import Login from "./components/Login"
 // import "../app.css";
 import {
   Route,
@@ -58,6 +60,7 @@ function App() {
         <Route index element={<RootPage />} />
         <Route path="/home" element={<Home />}></Route>
         <Route path="/inventory" element={<Inventory />}></Route>
+        <Route path="/login" element={<Login />}></Route>
       </Route>
     )
   );
